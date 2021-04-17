@@ -1,0 +1,27 @@
+<!-- Nav -->
+<nav id="layout-nav" class="navbar navbar-default navbar-fixed-top navbar-autohide" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            {% if this.theme.site_logo is empty %}
+                <a class="navbar-brand" href="{{ 'home'|page }}">{{ this.theme.site_name }}</a>
+            {% else %}
+            <a href="{{ 'home'|page }}">
+                <img class="navbar-brand" src="{{ this.theme.site_logo|media }}" alt="{{ this.theme.site_name }}">
+            </a>
+            {% endif %}
+        </div>
+        <div class="collapse navbar-collapse navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home'|page }}">Home</a></li>
+                <li class="{% if this.page.id == 'post-listing' %}active{% endif %}"><a href="{{ 'post/listing'|page }}">Blog</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

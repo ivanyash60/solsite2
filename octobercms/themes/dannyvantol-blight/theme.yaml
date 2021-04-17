@@ -1,0 +1,72 @@
+name: Blight
+author: Danny van Tol
+
+description: Modern responsive design
+code: blight
+
+form:
+  fields:
+    site_name:
+      label: Site name
+      comment: The website name as it should appear in the navigation bar and footer
+      default: Blight
+
+    site_logo:
+      label: Site logo
+      comment: The website logo as it should appear in the navigation bar (Replaces the site name in the navigation bar)
+
+      type: mediafinder
+      mode: image
+
+      default: null
+
+    favicon:
+      label: Favicon
+      comment: The favicon as it should appear in the browser tab
+
+      type: mediafinder
+      mode: image
+
+      default: null
+
+    illustration_image:
+      label: Illustration image
+      comment: The Illustration image as it should appear on the homepage
+
+      type: mediafinder
+      mode: image
+
+      default: null
+
+    illustration_font_color:
+      label: Illustration font color
+      comment: The Illustration font color as it should appear on the homepage
+
+      type: colorpicker
+      availableColors: ['#ffffff', '#333333']
+
+      default: '#ffffff'
+      assetVar: 'illustration-font-color'
+
+    primary_color:
+      label: Site color
+      comment: The website color influence as it should appear in the front-end
+
+      type: colorpicker
+
+      default: '#33aaff'
+      assetVar: 'primary-color'
+
+    font_color:
+      label: Site font color
+      comment: The website font color influence as it should appear in the front-end
+
+      type: colorpicker
+      availableColors: ['#ffffff', '#333333']
+
+      default: '#ffffff'
+      assetVar: 'font-color'
+
+require:
+  - Rainlab.Editable
+

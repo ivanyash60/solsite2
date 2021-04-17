@@ -1,0 +1,126 @@
+// Navigation
+.icon-bar {
+  background: #3af !important;
+  height: 3px !important
+}
+
+.navbar-default .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:after, .navbar-default .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
+  background: @primary-color;
+}
+
+.navbar-default .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li.active > a:hover:after {
+  background: darken(@primary-color, 10)
+}
+
+.navbar-default .navbar-collapse:not(.in):not(.collapsing) .navbar-nav li > a:hover:after {
+  background: lighten(@primary-color, 5);
+}
+
+// Illustration
+.illustration {
+  background-image: url("../images/wolf.jpg");
+
+  background-position: center center;
+  background-size: cover;
+}
+
+.illustration-overlay {
+  width: 100%;
+  background: rgba(0, 0, 0, .15);
+}
+
+.illustration .container {
+  height: 300px;
+  min-height: 300px;
+
+  display: table;
+}
+
+.illustration .container .illustration-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.illustration .illustration-content * {
+  color: @illustration-font-color;
+}
+
+.illustration .illustration-content p {
+  font-size: 1.5em;
+}
+
+.illustration .illustration-content > *:first-child {
+  margin-top: 25px;
+}
+
+.illustration .illustration-content > *:last-child {
+  margin-bottom: 25px;
+}
+
+.redactor-toolbar *, .redactor-editor * {
+  color: #586667 !important;
+}
+
+@media screen and (min-width: 992px) {
+  .illustration .container {
+    height: 500px;
+    min-height: 500px;
+  }
+}
+
+.theme-color {
+  background: @primary-color;
+}
+
+.theme-color h1, .theme-color h2, .theme-color h3, .theme-color h4, .theme-color h5, .theme-color h6, .theme-color small, .theme-color p, .theme-color pre, .theme-color span, .theme-color div, .theme-color a, .theme-color sub, .theme-color sup, .theme-color code {
+  color: @font-color;
+}
+
+.btn-theme {
+  background: @primary-color;
+  color: @font-color;
+
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+a.btn-theme:hover {
+  background: darken(@primary-color, 10);
+  color: @font-color;
+}
+
+.page-header {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+.footer {
+  margin-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.post-item:last-child {
+  margin-bottom: 0 !important;
+}
+
+.post-item h4 {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .post-item h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .hidden {
+    display: none;
+  }
+}
+

@@ -1,0 +1,108 @@
+title = "Startpagina"
+url = "/"
+layout = "default"
+is_hidden = 0
+
+[editable]
+file = "illustration.htm"
+
+[editable editable2]
+file = "what_we_do/title.htm"
+
+[editable editable3]
+file = "what_we_do/box_one.htm"
+
+[editable editable4]
+file = "what_we_do/box_two.htm"
+
+[editable editable5]
+file = "what_we_do/box_three.htm"
+
+[editable editable6]
+file = "vision/title.htm"
+
+[editable editable7]
+file = "vision/content.htm"
+
+[editable editable8]
+file = "service/title.htm"
+
+[editable editable9]
+file = "service/box_one.htm"
+
+[editable editable10]
+file = "service/box_two.htm"
+
+[editable editable11]
+file = "service/box_three.htm"
+
+[editable editable12]
+file = "service/box_four.htm"
+==
+<div class="illustration" {% if this.theme.illustration_image is not empty %}
+     style="background-image: url('{{ this.theme.illustration_image|media }}')" {% endif %}>
+    <div class="illustration-overlay">
+        <div class="container">
+            <div class="illustration-content">
+                {% component 'editable' %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container p-t-md p-b-lg">
+    <div class="page-header">
+        {% component 'editable2' %}
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            {% component 'editable3' %}
+        </div>
+
+        <div class="col-md-4">
+            {% component 'editable4' %}
+        </div>
+
+        <div class="col-md-4">
+            {% component 'editable5' %}
+        </div>
+    </div>
+</div>
+
+
+<div class="theme-color p-t-md p-b-lg">
+    <div class="container">
+        <div class="page-header">
+            {% component 'editable6' %}
+        </div>
+
+        {% component 'editable7' %}
+    </div>
+</div>
+
+<div class="container p-t-md">
+    <div class="page-header">
+        {% component 'editable8' %}
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            {% component 'editable9' %}
+        </div>
+
+        <div class="col-md-6">
+            {% component 'editable10' %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            {% component 'editable11' %}
+        </div>
+
+        <div class="col-md-6">
+            {% component 'editable12' %}
+        </div>
+    </div>
+</div>

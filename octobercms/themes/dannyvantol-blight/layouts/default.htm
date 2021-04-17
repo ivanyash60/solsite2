@@ -1,0 +1,51 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ this.theme.site_name }} - {{ this.page.title }}</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="title" content="{{ this.page.meta_title }}">
+        <meta name="description" content="{{ this.page.meta_description }}">
+
+        <meta name="author" content="Danny van Tol">
+        <meta name="generator" content="OctoberCMS">
+
+        {% if this.theme.favicon is empty %}
+            <link rel="icon" type="image/png" href="{{ 'assets/images/0001.jpg'|theme }}">
+        {% else %}
+            <link rel="icon" href="{{ this.theme.favicon|media }}">
+        {% endif%}
+
+        <link href="{{ ['assets/css/vendor.min.css', 'assets/less/theme.less']|theme }}" rel="stylesheet">
+
+        {% styles %}
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header id="layout-header">
+            {% partial 'site/header' %}
+        </header>
+
+        <!-- Content -->
+        <section id="layout-content">
+            {% page %}
+        </section>
+
+        <!-- Footer -->
+        <footer id="layout-footer">
+            {% partial 'site/footer' %}
+        </footer>
+
+        <!-- Scripts -->
+        <script src="{{ ['assets/vendor/jquery.js', 'assets/vendor/bootstrap.js']|theme }}"></script>
+
+        {% framework extras %}
+        {% scripts %}
+
+    </body>
+</html>
